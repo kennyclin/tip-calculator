@@ -59,7 +59,7 @@
           [self.tipPercent titleForSegmentAtIndex:sender.selectedSegmentIndex]);
     [self updateDisplayedTip];
     [self updateDisplayedTotal];
-    [self dismissTheKeyboard];
+   // [self dismissTheKeyboard];
 }
 
 - (IBAction)updateBillAmount:(UITextField *)sender {
