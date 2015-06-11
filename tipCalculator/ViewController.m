@@ -27,11 +27,18 @@
     [self updateDisplayedTotal];
 }
 
+-(void) viewWillDisappear:(BOOL)animated {
+    NSUserDefaults *myDefault=[NSUserDefaults standardUserDefaults];
+    [myDefault setObject:self.billAmount.text forKey: @"lastBillAmount"];
+}
+
 -(void) loadDefaultSettings{
     NSUserDefaults *myDefault=[NSUserDefaults standardUserDefaults];
     int tipIndex=(int)[myDefault integerForKey:@"defaultTipPercentIndex"];
+    NSString *lastBillAmount=[myDefault objectForKey:@"lastBillAmount"];
     NSLog(@"default tip index: %d", tipIndex);
     self.tipPercent.selectedSegmentIndex=tipIndex;
+    self.billAmount.text=lastBillAmount;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
