@@ -15,4 +15,3 @@ Completed:
 
 ![Video Walkthrough](https://github.com/kennyclin/tip-calculator/blob/master/tipCalcDemo2.gif)
 
-Note: to embed the gif file, just check your gif file into your repo and update the name of the file above.
